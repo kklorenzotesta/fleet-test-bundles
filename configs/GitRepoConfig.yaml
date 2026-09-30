@@ -1,0 +1,15 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: test-repo
+  namespace: fleet-local
+spec:
+  repo: "https://github.com/kklorenzotesta/fleet-test-bundles.git"
+  branch: main
+  pollingInterval: 60s
+  insecureSkipTLSVerify: true
+  targets:
+  - name: test
+    clusterSelector:
+      matchLabels:
+        env: test
