@@ -8,8 +8,3 @@ spec:
   branch: main
   pollingInterval: 60s
   insecureSkipTLSVerify: true
-  targets:
-  - name: test
-    clusterSelector:
-      matchLabels:
-        env: test
